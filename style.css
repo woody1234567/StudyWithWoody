@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.contact-page {
+    display: none
+}
+
+#btn-primary {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    /* 圓弧邊緣 */
+    background-color: #f0f0f0;
+    color: #333;
+    transition: transform 0.2s ease, background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+#btn-primary:hover {
+    transform: scale(1.05);
+    /* 滑鼠 hover 放大 */
+    background-color: #a8e6a1;
+    /* 點擊背景變淺綠色 */
+    color: white;
+    /* 字體變白 */
+}
+
+#language-toggle {
+    transition: transform 0.2s;
+}
+
+#language-toggle:hover {
+    transform: scale(1.08);
+}
+
+/* 可依照需求進一步美化卡片 */
+.portfolio-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-card .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    /* 可依圖片比例調整 */
+}
+
+.portfolio-card .btn {
+    margin-top: 10px;
+    border-radius: 20px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--  設定網頁編碼  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chun-Wei, Hsu</title>
+    <!-- 引入 Google Fonts 的 CSS，讓網站能使用特定的「網頁字型」。 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+TC:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!--  jsDelivr CDN 載入 Bootstrap 5.3.0 的「最小化版 CSS 檔案（bootstrap.min.css）」，目的是讓你在網站中使用 Bootstrap 的格線系統（Grid、RWD 響應式設計、預設按鈕、表單、排版樣式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 透過 cdnjs CDN 載入 Font Awesome 6.4.2 的 icon 字型樣式，讓你可以在網頁中使用成千上萬個 icon。 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- 引入本地端的樣式表設計 -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 從 jQuery 官方 CDN 載入 jQuery 函式庫（版本 3.6.0），可以容易操作DOM（網頁元素)、事件（例如點擊、滑過） -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Chun-Wei, Hsu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button id="language-toggle" class="btn btn-outline-primary position-fixed"
+                style="top:60px;right:20px;z-index:1050;">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about" data-en="About Me" data-zh="關於我">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-en="Contact" data-zh="聯絡我">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="./figures/" class="rounded-circle img-fluid mb-3" alt="你的照片" style="max-width: 200px;">
+            </div>
+            <div class="col-md-8">
+                <h2 data-en="About Me" data-zh="關於我">About Me</h2>
+                <p>
+                    Hi, I'm SimoneYC! I am passionate about programming, machine learning, and web development.<br>
+                    I enjoy learning new technologies and sharing my projects with others.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-envelope"></i> johannes8873@gmail.com</li>
+                    <li><i class="fab fa-linkedin"></i> <a href="" target="_blank">LinkedIn</a></li>
+                    <li><i class="fab fa-github"></i> <a href="" target="_blank">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <hr />
+
+    <div class="container">
+        <div class="text-center">
+            <h2 data-en="Projects" data-zh="專案">專案</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="portfolio-card card shadow">
+                    <img src="your-image.jpg" class="card-img-top" alt="作品圖片">
+                    <div class="card-body">
+                        <p class="card-text">
+                            這是我的作品集描述，介紹這個專案的背景與特色。
+                        </p>
+                        <a href="https://你的作品連結.com" id="btn-primary" class="btn" target="_blank">
+                            查看作品
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="portfolio-card card shadow">
+                    <img src="your-image.jpg" class="card-img-top" alt="作品圖片">
+                    <div class="card-body">
+                        <p class="card-text">
+                            這是我的作品集描述，介紹這個專案的背景與特色。
+                        </p>
+                        <a href="https://你的作品連結.com" id="btn-primary" class="btn" target="_blank">
+                            查看作品
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="portfolio-card card shadow">
+                    <img src="your-image.jpg" class="card-img-top" alt="作品圖片">
+                    <div class="card-body">
+                        <p class="card-text">
+                            這是我的作品集描述，介紹這個專案的背景與特色。
+                        </p>
+                        <a href="https://你的作品連結.com" id="btn-primary" class="btn" target="_blank">
+                            查看作品
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
