@@ -5,7 +5,7 @@
     <!--  設定網頁編碼  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Chun-Wei, Hsu</title>
+    <title> StudyWithWoody </title>
     <!-- 引入 Google Fonts 的 CSS，讓網站能使用特定的「網頁字型」。 -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap"
@@ -25,19 +25,40 @@
     <!-- 從 jQuery 官方 CDN 載入 jQuery 函式庫（版本 3.6.0），可以容易操作DOM（網頁元素)、事件（例如點擊、滑過） -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
+    <!-- Particles.js CDN for dynamic background -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <body>
+    <!-- Dynamic background container -->
+    <div id="particles-js"></div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Chun-Wei, Hsu</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./figures/Icon_trans_circle.png" alt="Icon" class="navbar-icon me-2">
+                StudyWithWoody
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <button id="language-toggle" class="btn btn-outline-primary position-fixed"
                 style="top:60px;right:20px;z-index:1050;">
+                English
+            </button>
+
+            <button id="dark-mode-toggle" class="btn btn-outline-primary position-fixed"
+                style="top:160px;right:20px;z-index:1050;">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <audio id="bg-music" src=".\music\The Girl from Saint-Anne-des-Plaines - The Mini Vandals.mp3" loop></audio>
+            <button id="music-toggle" class="btn btn-outline-primary position-fixed"
+                style="top:110px;right:20px;z-index:1050;">
+                <i class="fas fa-play"></i>
+                music
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -45,90 +66,155 @@
                         <a class="nav-link active" href="#about" data-en="About Me" data-zh="關於我">About me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact" data-en="Contact" data-zh="聯絡我">Contact</a>
+                        <a class="nav-link active" href="#Education" data-en="Education" data-zh="教育背景">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#Teaching Experience" data-en="Teaching Experience"
+                            data-zh="教學經驗">Teaching
+                            Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#contact" data-en="Contact me" data-zh="聯絡我">Contact me</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="container my-5">
+    <section id="about" class="container my-5">
         <div class="row align-items-center">
-            <div class="col-md-4 text-center">
-                <img src="./figures/" class="rounded-circle img-fluid mb-3" alt="你的照片" style="max-width: 200px;">
-            </div>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <h2 data-en="About Me" data-zh="關於我">About Me</h2>
-                <p>
-                    Hi, I'm SimoneYC! I am passionate about programming, machine learning, and web development.<br>
-                    I enjoy learning new technologies and sharing my projects with others.
+                <p data-zh="我是許峻瑋，也可以叫我Woody老師，我熱衷於學習新知以及技術並與他人分享。AI時代正在來臨，是這個時代的新槓桿，讓大家能再單位時間獲取更高的學習成果，未來，能夠善用AI的人將會取代不會使用AI的人。Woody老師會帶你善用AI工具的同學，也正積極開發AI助教來輔助學生的學習，期待與同學們一起探索AI在學習方面的無限可能。"
+                    data-en="Hello, I am Chun-Wei, Hsu, also known as Woody. I am passionate about learning new knowledge and technologies and sharing them with others. The era of AI is coming, serving as a new lever in this age, allowing everyone to achieve higher learning outcomes in a unit of time. In the future, those who can effectively use AI will replace those who cannot. Therefore,I am going to lead you to the path of leveraging assist students in their learning, and I look forward to exploring the infinite possibilities of AI in education with all of you.">
+                    Hello, I am Chun-Wei, Hsu, also known as Woody. I am passionate about learning new knowledge and
+                    technologies and sharing them with others. The era of AI is coming, serving as a new lever in this
+                    age, allowing everyone to achieve higher learning outcomes in a unit of time. In the future, those
+                    who can effectively use AI will replace those who cannot. Therefore,I am going to lead you to the
+                    path of leveraging assist students in their learning, and I look forward to exploring the infinite
+                    possibilities of AI in education with all of you.
                 </p>
-
             </div>
         </div>
+        <section id="Education" class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2 class="text-center" data-en="Education" data-zh="學歷">Education</h2>
+                    <ul class="list-group">
+                        <li class="text-center list-group-item">
+                            <strong data-en="National Taiwan University" data-zh="國立臺灣大學">National Taiwan
+                                University</strong><br>
+                            <span data-en="Master of Arts, Department of Economics" data-zh="碩士，經濟學研究所">Master of Arts,
+                                Department of Economics</span><br>
+                            <span data-en="2023 - 2025" data-zh="2023 - 2025">2023 - 2025</span>
+                        </li>
+                        <li class="text-center list-group-item">
+                            <strong data-en="National Taiwan University" data-zh="國立臺灣大學">National Taiwan
+                                University</strong><br>
+                            <span data-en="Bachelor of Science, Department of Physics" data-zh="學士，物理學系">Bachelor of
+                                Science, Department of Physics</span><br>
+                            <span data-en="2019 - 2023" data-zh="2019 - 2023">2019 - 2023</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </section>
     <hr />
-    <section id="skills" class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h2 class="text-center" data-en="Skills" data-zh="技能">Skills</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4 data-en="Programming Languages" data-zh="程式語言">Programming Languages</h4>
-                        <ul class="list-group mb-3">
-                            <li class="list-group-item">Python</li>
-                            <li class="list-group-item">C/C++</li>
-                            <li class="list-group-item">Java</li>
-                            <li class="list-group-item">R</li>
-                            <li class="list-group-item">JavaScript</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 data-en="Web & Tools" data-zh="網頁與工具">Web & Tools</h4>
-                        <ul class="list-group mb-3">
-                            <li class="list-group-item">HTML/CSS/Bootstrap</li>
-                            <li class="list-group-item">React</li>
-                            <li class="list-group-item">Git & GitHub</li>
-                            <li class="list-group-item">Linux</li>
-                            <li class="list-group-item">VS Code</li>
-                        </ul>
+    <section id="Teaching Experience" class="container my-5">
+        <h2 class="text-center mb-4" data-en="Teaching Experience" data-zh="教學經驗">Teaching Experience</h2>
+        <div class="row align-items-center">
+            <!-- Left column - Teaching Experience List -->
+            <div class="col-md-6">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">
+                        <strong data-en="Kang Chiao International School Xiugang Campus" data-zh="台北秀岡康橋,臺灣">Kang
+                            Chiao International School Xiugang Campus</strong><br>
+                        <span data-en="Science Olympiad Class, Course Instructor" data-zh="科學奧林匹亞課後班 指導老師">Science
+                            Olympiad Class, Course Instructor</span><br>
+                        <span data-en="2021.02 - 2023.07" data-zh="2021.02 - 2023.07">2021.02 - 2023.07</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong data-en="Kang Chiao International School Xiugang Campus" data-zh="台北秀岡康橋, 臺灣">Kang
+                            Chiao International School Xiugang Campus</strong><br>
+                        <span data-en="American Mathematics Competitions 10 Class, Course Instructor"
+                            data-zh="美國數學競賽(AMC 10)課後班 指導老師">American Mathematics Competitions 10 Class, Course
+                            Instructor</span><br>
+                        <span data-en="2021.08-2022.01" data-zh="2021.08-2022.01">2021.08-2022.01</span>
+                        <span data-en="2023.02-2023.07" data-zh="2021.08-2022.01">2023.02-2023.07</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong data-en="Taipei Fuhsing Private School" data-zh="台北復興中學, 臺灣">Taipei Fuhsing Private
+                            School</strong><br>
+                        <span data-en="Science Olympiad Class, Course Instructor" data-zh="科學奧林匹亞課後班 指導老師">Science
+                            Olympiad Class, Course Instructor</span><br>
+                        <span data-en="2022.02-2022.07" data-zh="2022.02-2022.07">2022.02-2022.07</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong data-en="Kang Chiao International School, Kunshan, China" data-zh="江蘇崑山康橋, 中國">Kang
+                            Chiao
+                            International School, Kunshan, China</strong><br>
+                        <span data-en="Social Sciences Honors Program, Course Instructor"
+                            data-zh="社會科學專班, 課後指導老師">Social Sciences Honors Program, Course
+                            Instructor</span><br>
+                        <span data-en="2023.08-2024.07" data-zh="2023.08-2024.07">2023.08-2024.07</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right column - School Photos Gallery -->
+            <div class="col-md-6">
+                <div class="school-gallery">
+                    <h5 class="text-center mb-3" data-en="School Photos" data-zh="學校照片">School Photos</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <div class="school-photo-container">
+                                <img src="./figures/Xiugang.jpg" class="img-fluid rounded school-photo"
+                                    alt="Kang Chiao Xiugang Campus" data-school="Kang Chiao Xiugang Campus">
+                                <div class="photo-overlay">
+                                    <small data-en="Kang Chiao Xiugang" data-zh="康橋秀岡">Kang Chiao Xiugang</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="school-photo-container">
+                                <img src="./figures/Fuhsing.jpg" class="img-fluid rounded school-photo"
+                                    alt="Taipei Fuhsing Private School" data-school="Taipei Fuhsing Private School">
+                                <div class="photo-overlay">
+                                    <small data-en="Fuhsing School" data-zh="復興中學">Fuhsing School</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="school-photo-container">
+                                <img src="./figures/Kunshan.jpg" class="img-fluid rounded school-photo"
+                                    alt="Kang Chiao Kunshan Campus" data-school="Kang Chiao Kunshan Campus">
+                                <div class="photo-overlay">
+                                    <small data-en="Kang Chiao Kunshan" data-zh="康橋崑山">Kang Chiao Kunshan</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="school-photo-container">
+                                <img src="./figures/school-placeholder-4.jpg" class="img-fluid rounded school-photo"
+                                    alt="Teaching Moments" data-school="Teaching Moments">
+                                <div class="photo-overlay">
+                                    <small data-en="Teaching Moments" data-zh="教學時光">Teaching Moments</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="education" class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h2 class="text-center" data-en="Education" data-zh="學歷">Education</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <strong data-en="National Taiwan University" data-zh="國立臺灣大學">National Taiwan
-                            University</strong><br>
-                        <span data-en="Master of Science, Computer Science" data-zh="碩士，資訊工程">Master of Science,
-                            Computer Science</span><br>
-                        <span data-en="2023 - 2025" data-zh="2023 - 2025">2023 - 2025</span>
-                    </li>
-                    <li class="list-group-item">
-                        <strong data-en="National Cheng Kung University" data-zh="國立成功大學">National Cheng Kung
-                            University</strong><br>
-                        <span data-en="Bachelor of Science, Electrical Engineering" data-zh="學士，電機工程">Bachelor of
-                            Science, Electrical Engineering</span><br>
-                        <span data-en="2019 - 2023" data-zh="2019 - 2023">2019 - 2023</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-
     <div class="container">
         <div class="text-center">
             <h2 data-en="Projects" data-zh="專案">專案</h2>
         </div>
         <div class="row">
             <div class="col-12 col-md-4">
-                <div class="portfolio-card card shadow">
+                <div class="text-center portfolio-card card shadow">
                     <img src="your-image.jpg" class="card-img-top" alt="作品圖片">
                     <div class="card-body">
                         <p class="card-text">
@@ -141,7 +227,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4">
-                <div class="portfolio-card card shadow">
+                <div class="text-center portfolio-card card shadow">
                     <img src="your-image.jpg" class="card-img-top" alt="作品圖片">
                     <div class="card-body">
                         <p class="card-text">
@@ -154,7 +240,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4">
-                <div class="portfolio-card card shadow">
+                <div class="text-center portfolio-card card shadow">
                     <img src="your-image.jpg" class="card-img-top" alt="作品圖片">
                     <div class="card-body">
                         <p class="card-text">
@@ -172,7 +258,7 @@
     <section id="contact" class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h2 class="text-center" data-en="Contact" data-zh="聯絡我">Contact</h2>
+                <h2 class="text-center" data-en="Contact me" data-zh="聯絡我">Contact me</h2>
                 <ul class="list-unstyled text-center">
                     <li><i class="fas fa-envelope"></i> johannes8873@gmail.com</li>
                     <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
