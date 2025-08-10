@@ -229,27 +229,6 @@ section {
     transition: all 0.3s ease;
 }
 
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-color);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.navbar-nav .nav-link:hover::after {
-    width: 100%;
-}
-
-.navbar-nav .nav-link.active::after {
-    width: 30%;
-    background-color: var(--accent-color);
-    opacity: 0.7;
-}
 
 /* Wave Background Animation */
 @keyframes gradientWave {
@@ -549,6 +528,48 @@ section {
 
     .photo-overlay small {
         font-size: 10px;
+    }
+
+    /* Mobile button positioning */
+    #language-toggle,
+    #music-toggle,
+    #dark-mode-toggle {
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+        min-width: 60px;
+        min-height: 40px;
+    }
+    
+    #language-toggle {
+        top: 60px !important;
+        right: 10px !important;
+    }
+    
+    #music-toggle {
+        top: 110px !important;
+        right: 10px !important;
+    }
+    
+    #dark-mode-toggle {
+        top: 160px !important;
+        right: 10px !important;
+    }
+
+    /* Center navigation items in mobile collapsed menu */
+    .navbar-collapse .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-collapse .nav-item {
+        display: block;
+        width: 100%;
+    }
+    
+    .navbar-collapse .nav-link {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        padding: 12px 0;
     }
 }
 

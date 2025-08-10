@@ -3,13 +3,26 @@ let currentLang = 'en';
 const langBtn = document.getElementById('language-toggle');
 langBtn.textContent = 'English';
 
-langBtn.addEventListener('click', () => {
+// Language button event handlers - prevent double trigger
+let langTouchHandled = false;
+
+function toggleLanguage(e) {
+    if (e.type === 'touchstart') {
+        langTouchHandled = true;
+    } else if (e.type === 'click' && langTouchHandled) {
+        langTouchHandled = false;
+        return;
+    }
+    
     currentLang = currentLang === 'en' ? 'zh' : 'en';
     document.querySelectorAll('[data-en][data-zh]').forEach(el => {
         el.textContent = el.getAttribute(`data-${currentLang}`);
     });
     langBtn.textContent = currentLang === 'en' ? 'English' : '中文';
-});
+}
+
+langBtn.addEventListener('click', toggleLanguage);
+langBtn.addEventListener('touchstart', toggleLanguage, { passive: true });
 
 const music = document.getElementById('bg-music');
 const musicBtn = document.getElementById('music-toggle');
@@ -27,17 +40,28 @@ function startMusic() {
     }).catch(() => { });
 }
 
-// 只在第一次互動時自動播放
+// 只在第一次互動時自動播放 - Include touch events for mobile
 function handleUserInteraction() {
     if (!hasStarted) startMusic();
 }
 window.addEventListener('click', handleUserInteraction, { once: true });
+window.addEventListener('touchstart', handleUserInteraction, { once: true, passive: true });
 window.addEventListener('keydown', handleUserInteraction, { once: true });
-window.addEventListener('scroll', handleUserInteraction, { once: true });
+window.addEventListener('scroll', handleUserInteraction, { once: true, passive: true });
 
-// 按鈕控制播放/暫停
-musicBtn.addEventListener('click', (e) => {
+// Music button toggle function - prevent double trigger
+let musicTouchHandled = false;
+
+function toggleMusic(e) {
     e.stopPropagation();
+    
+    if (e.type === 'touchstart') {
+        musicTouchHandled = true;
+    } else if (e.type === 'click' && musicTouchHandled) {
+        musicTouchHandled = false;
+        return;
+    }
+    
     if (!hasStarted || music.paused) {
         startMusic();
     } else {
@@ -45,9 +69,12 @@ musicBtn.addEventListener('click', (e) => {
         // musicBtn.textContent = "stopped";
         musicIcon.classList.remove('fa-pause');
         musicIcon.classList.add('fa-play');
-
     }
-});
+}
+
+// 按鈕控制播放/暫停 - Support both click and touch events
+musicBtn.addEventListener('click', toggleMusic);
+musicBtn.addEventListener('touchstart', toggleMusic, { passive: false });
 
 // Dark mode toggle functionality
 const darkModeBtn = document.getElementById('dark-mode-toggle');
@@ -70,13 +97,26 @@ function applyTheme() {
 // Initialize theme on page load
 applyTheme();
 
-// Dark mode toggle event listener
-darkModeBtn.addEventListener('click', () => {
+// Dark mode toggle function - prevent double trigger
+let darkModeTouchHandled = false;
+
+function toggleDarkMode(e) {
+    if (e.type === 'touchstart') {
+        darkModeTouchHandled = true;
+    } else if (e.type === 'click' && darkModeTouchHandled) {
+        darkModeTouchHandled = false;
+        return;
+    }
+    
     isDarkMode = !isDarkMode;
     localStorage.setItem('darkMode', isDarkMode);
     applyTheme();
     updateGeometricBackground(); // Update geometric background when theme changes
-});
+}
+
+// Dark mode toggle event listeners - Support both click and touch events
+darkModeBtn.addEventListener('click', toggleDarkMode);
+darkModeBtn.addEventListener('touchstart', toggleDarkMode, { passive: true });
 
 // /* Particles.js configuration - COMMENTED OUT
 // function initParticles() {
