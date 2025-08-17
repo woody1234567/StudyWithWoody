@@ -530,36 +530,32 @@ section {
         font-size: 10px;
     }
 
-    /* Mobile button positioning */
-    #language-toggle,
-    #music-toggle,
-    #dark-mode-toggle {
-        font-size: 14px !important;
-        padding: 10px 14px !important;
-        min-width: 70px !important;
-        min-height: 44px !important;
-        border-width: 2px !important;
-        border-radius: 8px !important;
+    /* Mobile navbar buttons styling */
+    .navbar .d-flex {
+        flex-wrap: nowrap;
+    }
+    
+    .navbar #language-toggle,
+    .navbar #music-toggle,
+    .navbar #dark-mode-toggle {
+        font-size: 12px !important;
+        padding: 6px 8px !important;
+        margin-left: 4px !important;
+        border-width: 1px !important;
+        border-radius: 4px !important;
         touch-action: manipulation !important;
         user-select: none !important;
+        min-width: auto !important;
+        white-space: nowrap;
     }
     
-    #language-toggle {
-        top: 70px !important;
-        right: 15px !important;
-        z-index: 99999 !important;
+    /* Hide text on mobile for space efficiency */
+    .navbar #music-toggle {
+        font-size: 0 !important;
     }
     
-    #music-toggle {
-        top: 125px !important;
-        right: 15px !important;
-        z-index: 99998 !important;
-    }
-    
-    #dark-mode-toggle {
-        top: 180px !important;
-        right: 15px !important;
-        z-index: 99997 !important;
+    .navbar #music-toggle i {
+        font-size: 14px !important;
     }
 
     /* Center navigation items in mobile collapsed menu */
@@ -600,6 +596,30 @@ section {
 #music-toggle,
 #dark-mode-toggle {
     pointer-events: auto !important;
-    position: fixed !important;
-    z-index: 99999 !important;
+}
+
+/* Navbar buttons styling */
+.navbar .btn {
+    height: auto;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.navbar #language-toggle,
+.navbar #music-toggle,
+.navbar #dark-mode-toggle {
+    margin-left: 8px;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar #language-toggle:hover,
+.navbar #music-toggle:hover,
+.navbar #dark-mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    transform: scale(1.05);
 }
