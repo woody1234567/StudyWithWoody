@@ -7,6 +7,9 @@ langBtn.textContent = 'English';
 let langTouchHandled = false;
 
 function toggleLanguage(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
     if (e.type === 'touchstart') {
         langTouchHandled = true;
     } else if (e.type === 'click' && langTouchHandled) {
@@ -22,7 +25,7 @@ function toggleLanguage(e) {
 }
 
 langBtn.addEventListener('click', toggleLanguage);
-langBtn.addEventListener('touchstart', toggleLanguage, { passive: true });
+langBtn.addEventListener('touchstart', toggleLanguage, { passive: false });
 
 const music = document.getElementById('bg-music');
 const musicBtn = document.getElementById('music-toggle');
@@ -53,6 +56,7 @@ window.addEventListener('scroll', handleUserInteraction, { once: true, passive: 
 let musicTouchHandled = false;
 
 function toggleMusic(e) {
+    e.preventDefault();
     e.stopPropagation();
     
     if (e.type === 'touchstart') {
@@ -101,6 +105,9 @@ applyTheme();
 let darkModeTouchHandled = false;
 
 function toggleDarkMode(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
     if (e.type === 'touchstart') {
         darkModeTouchHandled = true;
     } else if (e.type === 'click' && darkModeTouchHandled) {
@@ -116,7 +123,7 @@ function toggleDarkMode(e) {
 
 // Dark mode toggle event listeners - Support both click and touch events
 darkModeBtn.addEventListener('click', toggleDarkMode);
-darkModeBtn.addEventListener('touchstart', toggleDarkMode, { passive: true });
+darkModeBtn.addEventListener('touchstart', toggleDarkMode, { passive: false });
 
 // /* Particles.js configuration - COMMENTED OUT
 // function initParticles() {

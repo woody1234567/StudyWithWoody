@@ -535,24 +535,31 @@ section {
     #music-toggle,
     #dark-mode-toggle {
         font-size: 14px !important;
-        padding: 8px 12px !important;
-        min-width: 60px;
-        min-height: 40px;
+        padding: 10px 14px !important;
+        min-width: 70px !important;
+        min-height: 44px !important;
+        border-width: 2px !important;
+        border-radius: 8px !important;
+        touch-action: manipulation !important;
+        user-select: none !important;
     }
     
     #language-toggle {
-        top: 60px !important;
-        right: 10px !important;
+        top: 70px !important;
+        right: 15px !important;
+        z-index: 1053 !important;
     }
     
     #music-toggle {
-        top: 110px !important;
-        right: 10px !important;
+        top: 125px !important;
+        right: 15px !important;
+        z-index: 1052 !important;
     }
     
     #dark-mode-toggle {
-        top: 160px !important;
-        right: 10px !important;
+        top: 180px !important;
+        right: 15px !important;
+        z-index: 1051 !important;
     }
 
     /* Center navigation items in mobile collapsed menu */
