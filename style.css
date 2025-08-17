@@ -587,3 +587,19 @@ section {
     border-radius: 50%;
     object-fit: cover;
 }
+
+/* Fix button clickability issues - prevent icons from blocking click events */
+#language-toggle i,
+#music-toggle i,
+#dark-mode-toggle i {
+    pointer-events: none;
+}
+
+/* Ensure buttons have proper pointer events */
+#language-toggle,
+#music-toggle,
+#dark-mode-toggle {
+    pointer-events: auto;
+    position: relative;
+    z-index: 1050;
+}
