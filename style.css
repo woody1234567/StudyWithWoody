@@ -623,3 +623,420 @@ section {
     color: white;
     transform: scale(1.05);
 }
+
+/* Teaching Expertise Section Styles */
+.expertise-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+    border-color: var(--accent-color);
+}
+
+.expertise-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.expertise-icon i:nth-child(2) {
+    margin-left: -10px;
+    opacity: 0.7;
+}
+
+.expertise-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.expertise-card p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Course Services Section Styles */
+.service-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.service-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgba(162, 212, 230, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    background-color: rgba(162, 212, 230, 0.2);
+    transform: translateX(5px);
+}
+
+.service-item i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.service-item h5 {
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.service-item p {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Subject Grid Styles */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.subject-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: rgba(255, 161, 38, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.subject-item:hover {
+    background-color: rgba(255, 161, 38, 0.2);
+    transform: scale(1.05);
+}
+
+.subject-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.subject-item span {
+    color: var(--text-color);
+    font-weight: 500;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Learning Stages Cards */
+.stage-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.stage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+    border-color: var(--accent-color);
+}
+
+.stage-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.stage-card h5 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.stage-card p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Dark mode adjustments for new sections */
+[data-theme="dark"] .expertise-card,
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .stage-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .expertise-card h4,
+[data-theme="dark"] .service-card h3,
+[data-theme="dark"] .stage-card h5,
+[data-theme="dark"] .service-item h5 {
+    color: var(--primary-blue);
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+    .expertise-card,
+    .service-card,
+    .stage-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .expertise-icon {
+        font-size: 2rem;
+    }
+    
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .service-item i {
+        margin-top: 0;
+    }
+}
+
+/* Teaching Results Section Styles */
+.results-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.results-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.results-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Statistics Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 161, 38, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background-color: rgba(255, 161, 38, 0.2);
+    transform: scale(1.05);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Growth Timeline */
+.growth-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgba(162, 212, 230, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.timeline-item:hover {
+    background-color: rgba(162, 212, 230, 0.2);
+    transform: translateX(5px);
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 27px;
+    bottom: -20px;
+    width: 2px;
+    height: 20px;
+    background-color: var(--accent-color);
+}
+
+.timeline-year {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    min-width: 50px;
+    text-align: center;
+}
+
+.timeline-content {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Philosophy Card */
+.philosophy-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.philosophy-card:hover {
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.philosophy-card h3 {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.philosophy-item {
+    text-align: center;
+    padding: 25px 15px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-5px);
+}
+
+.philosophy-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.philosophy-item h4 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.philosophy-item p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Dark mode adjustments for results section */
+[data-theme="dark"] .results-card,
+[data-theme="dark"] .philosophy-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .results-card h3,
+[data-theme="dark"] .philosophy-card h3,
+[data-theme="dark"] .philosophy-item h4 {
+    color: var(--primary-blue);
+}
+
+/* Responsive adjustments for results section */
+@media (max-width: 768px) {
+    .results-card,
+    .philosophy-card {
+        padding: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .timeline-item::after {
+        display: none;
+    }
+    
+    .philosophy-item {
+        padding: 20px 10px;
+        margin-bottom: 20px;
+    }
+}
