@@ -534,7 +534,7 @@ section {
     .navbar .d-flex {
         flex-wrap: nowrap;
     }
-    
+
     .navbar #language-toggle,
     .navbar #music-toggle,
     .navbar #dark-mode-toggle {
@@ -548,12 +548,12 @@ section {
         min-width: auto !important;
         white-space: nowrap;
     }
-    
+
     /* Hide text on mobile for space efficiency */
     .navbar #music-toggle {
         font-size: 0 !important;
     }
-    
+
     .navbar #music-toggle i {
         font-size: 14px !important;
     }
@@ -562,12 +562,12 @@ section {
     .navbar-collapse .navbar-nav {
         text-align: center;
     }
-    
+
     .navbar-collapse .nav-item {
         display: block;
         width: 100%;
     }
-    
+
     .navbar-collapse .nav-link {
         text-align: center;
         justify-content: center;
@@ -696,7 +696,8 @@ section {
 
 .service-item {
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
     gap: 15px;
     padding: 15px;
     background-color: rgba(162, 212, 230, 0.1);
@@ -817,27 +818,28 @@ section {
 
 /* Responsive adjustments for new sections */
 @media (max-width: 768px) {
+
     .expertise-card,
     .service-card,
     .stage-card {
         padding: 20px;
         margin-bottom: 20px;
     }
-    
+
     .expertise-icon {
         font-size: 2rem;
     }
-    
+
     .subject-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .service-item {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
-    
+
     .service-item i {
         margin-top: 0;
     }
@@ -907,7 +909,8 @@ section {
 
 .timeline-item {
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
     gap: 15px;
     padding: 15px;
     background-color: rgba(162, 212, 230, 0.1);
@@ -1012,29 +1015,30 @@ section {
 
 /* Responsive adjustments for results section */
 @media (max-width: 768px) {
+
     .results-card,
     .philosophy-card {
         padding: 20px;
     }
-    
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .stat-number {
         font-size: 2rem;
     }
-    
+
     .timeline-item {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
-    
+
     .timeline-item::after {
         display: none;
     }
-    
+
     .philosophy-item {
         padding: 20px 10px;
         margin-bottom: 20px;
