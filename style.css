@@ -547,19 +547,19 @@ section {
     #language-toggle {
         top: 70px !important;
         right: 15px !important;
-        z-index: 1053 !important;
+        z-index: 99999 !important;
     }
     
     #music-toggle {
         top: 125px !important;
         right: 15px !important;
-        z-index: 1052 !important;
+        z-index: 99998 !important;
     }
     
     #dark-mode-toggle {
         top: 180px !important;
         right: 15px !important;
-        z-index: 1051 !important;
+        z-index: 99997 !important;
     }
 
     /* Center navigation items in mobile collapsed menu */
@@ -599,7 +599,7 @@ section {
 #language-toggle,
 #music-toggle,
 #dark-mode-toggle {
-    pointer-events: auto;
-    position: relative;
-    z-index: 1050;
+    pointer-events: auto !important;
+    position: fixed !important;
+    z-index: 99999 !important;
 }
