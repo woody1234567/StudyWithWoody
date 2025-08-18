@@ -86,35 +86,90 @@
     <audio id="bg-music" src=".\music\The Girl from Saint-Anne-des-Plaines - The Mini Vandals.mp3" loop></audio>
 
     <section id="about" class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-12">
-                <h2 data-en="About Me" data-zh="關於我">About Me</h2>
-                <p data-zh="我是許峻瑋，也可以叫我Woody老師，我熱衷於學習新知以及技術並與他人分享。AI時代正在來臨，是這個時代的新槓桿，讓大家能再單位時間獲取更高的學習成果，未來，能夠善用AI的人將會取代不會使用AI的人。Woody老師會帶你善用AI工具的同學，也正積極開發AI助教來輔助學生的學習，期待與同學們一起探索AI在學習方面的無限可能。"
-                    data-en="Hello, I am Chun-Wei, Hsu, also known as Woody. I am passionate about learning new knowledge and technologies and sharing them with others. The era of AI is coming, serving as a new lever in this age, allowing everyone to achieve higher learning outcomes in a unit of time. In the future, those who can effectively use AI will replace those who cannot. Therefore,I am going to lead you to the path of leveraging assist students in their learning, and I look forward to exploring the infinite possibilities of AI in education with all of you.">
-                    Hello, I am Chun-Wei, Hsu, also known as Woody. I am passionate about learning new knowledge and
-                    technologies and sharing them with others. The era of AI is coming, serving as a new lever in this
-                    age, allowing everyone to achieve higher learning outcomes in a unit of time. In the future, those
-                    who can effectively use AI will replace those who cannot. Therefore,I am going to lead you to the
-                    path of leveraging assist students in their learning, and I look forward to exploring the infinite
-                    possibilities of AI in education with all of you.
-                </p>
+        <div class="row g-4 align-items-center">
+            <!-- Profile column -->
+            <div class="col-md-4">
+                <div class="profile-card text-center p-4">
+                    <img id="profile-photo" class="profile-photo" src="./figures/Egypt.jpg" alt="Woody profile photo"
+                        loading="lazy">
+                    <h3 class="mt-3" data-en="Chun-Wei Hsu (Woody)" data-zh="許峻瑋（Woody）">Chun-Wei Hsu (Woody)</h3>
+                    <p class="profile-title mb-2" data-en="Economics M.A. Student" data-zh="經濟學碩士生">Economics M.A.
+                        Student</p>
+                    <p class="profile-title mb-2" data-en="AI Education tool developer" data-zh="AI教育工具開發者">AI Education
+                        tool developer</p>
+                    <div class="profile-meta">
+                        <div class="mb-1"><i class="fas fa-map-marker-alt me-2"></i><span data-en="Kaohsiung, Taiwan"
+                                data-zh="高雄，臺灣">Kaohsiung, Taiwan</span></div>
+                        <div class="mb-2"><i class="fas fa-envelope me-2"></i><a
+                                href="#contact">johannes8873@gmail.com</a></div>
+                    </div>
+                    <div class="profile-social">
+                        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <section id="Education" class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <h2 class="text-center" data-en="Education" data-zh="學歷">Education</h2>
-                    <ul class="list-group">
-                        <li class="text-center list-group-item">
-                            <strong data-en="National Taiwan University" data-zh="國立臺灣大學">National Taiwan
-                                University</strong><br>
+
+            <!-- Bio + Education column -->
+            <div class="col-md-8">
+                <h2 data-en="About Me" data-zh="關於我">About Me</h2>
+                <p data-zh="我是許峻瑋，也可以叫我Woody老師，我熱衷於學習新知以及技術並與他人分享。AI時代正在來臨，是這個時代的新槓桿，讓大家能再單位時間獲取更高的學習成果，未來，能夠善用AI的人將會取代不會使用AI的人。我致力於帶領學生善用AI工具，也正積極開發AI助教來輔助學生的學習，期待與同學們一起探索AI在學習方面的無限可能。"
+                    data-en="Hello, I am Chun-Wei, Hsu, also known as Woody. I am passionate about learning new knowledge and technologies and sharing them with others. The era of AI is coming, serving as a new lever that enables greater learning outcomes within the same time. Those who can effectively use AI will outpace those who cannot. I am committed to helping students leverage AI tools and am actively developing an AI teaching assistant to support learning. I look forward to exploring the infinite possibilities of AI in education with you.">
+                    Hello, I am Chun-Wei, Hsu, also known as Woody. I am passionate about learning new knowledge and
+                    technologies and sharing them with others. The era of AI is coming, serving as a new lever that
+                    enables greater learning outcomes within the same time. Those who can effectively use AI will
+                    outpace those who cannot. I am committed to helping students leverage AI tools and am actively
+                    developing an AI teaching assistant to support learning. I look forward to exploring the infinite
+                    possibilities of AI in education with you.
+                </p>
+
+                <!-- Quick stats -->
+                <div class="row g-3 mt-2">
+                    <div class="col-6 col-lg-4">
+                        <div class="about-stat">
+                            <div class="stat-number" data-en="5+" data-zh="5+">5+</div>
+                            <div class="stat-label" data-en="Years Tutoring" data-zh="教學年資">Years Tutoring</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="about-stat">
+                            <div class="stat-number" data-en="2" data-zh="2">2</div>
+                            <div class="stat-label" data-en="Disciplines" data-zh="跨域背景">Disciplines</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="about-stat">
+                            <div class="stat-number" data-en="AI" data-zh="AI">AI</div>
+                            <div class="stat-label" data-en="EdTech Focus" data-zh="教育科技關注">EdTech Focus</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="mt-4">
+                    <h2 data-en="Education" data-zh="學歷">Education</h2>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item">
+                            <strong data-en="University of Hamburg, Germany" data-zh="漢堡大學, 德國">University of Hamburg,
+                                Germany</strong><br>
+                            <span data-en="Master of Arts, Department of Economics" data-zh="交換學生，經濟學研究所">Exchange
+                                student,
+                                Department of Economics</span><br>
+                            <span data-en="2023 - 2025" data-zh="2023 - 2025">2024 - 2025</span>
+                        </li>
+
+                        <li class="list-group-item">
+                            <strong data-en="National Taiwan University, Taiwan" data-zh="國立臺灣大學, 臺灣">National Taiwan
+                                University, Taiwan</strong><br>
                             <span data-en="Master of Arts, Department of Economics" data-zh="碩士，經濟學研究所">Master of Arts,
                                 Department of Economics</span><br>
                             <span data-en="2023 - 2025" data-zh="2023 - 2025">2023 - 2025</span>
                         </li>
-                        <li class="text-center list-group-item">
-                            <strong data-en="National Taiwan University" data-zh="國立臺灣大學">National Taiwan
-                                University</strong><br>
+                        <li class="list-group-item">
+                            <strong data-en="National Taiwan University, Taiwan" data-zh="國立臺灣大學, 臺灣">National Taiwan
+                                University, Taiwan</strong><br>
                             <span data-en="Bachelor of Science, Department of Physics" data-zh="學士，物理學系">Bachelor of
                                 Science, Department of Physics</span><br>
                             <span data-en="2019 - 2023" data-zh="2019 - 2023">2019 - 2023</span>
@@ -122,7 +177,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 
     <!-- Teaching Expertise Section -->
@@ -310,7 +365,7 @@
                     <h3 data-en="Teaching Statistics" data-zh="教學統計">Teaching Statistics</h3>
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <div class="stat-number">4+</div>
+                            <div class="stat-number">5+</div>
                             <div class="stat-label" data-en="Years of Experience" data-zh="年教學經驗">Years of Experience
                             </div>
                         </div>
@@ -536,19 +591,32 @@
     <hr />
 
     <section id="contact" class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+        <div class="row align-items-center">
+            <!-- Contact info left -->
+            <div class="col-lg-6">
                 <h2 class="text-center" data-en="Contact me" data-zh="聯絡我">Contact me</h2>
-                <ul class="list-unstyled text-center">
-                    <li><i class="fas fa-envelope"></i> johannes8873@gmail.com</li>
-                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-                    </li>
-                    <li><i class="fab fa-github"></i> <a href="https://github.com/" target="_blank">GitHub</a></li>
-                </ul>
+                <div class="profile-social text-center">
+                    <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@%E8%A8%B1%E5%B3%BB%E7%91%8B-p7i" target="_blank"
+                        aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://lin.ee/IgCDBJB" target="_blank" aria-label="Line"><i class="fab fa-line"></i></a>
+                </div>
                 <p class="text-center" data-en="Feel free to reach out via email or social media!"
                     data-zh="歡迎透過信箱或社群聯絡我！">
                     Feel free to reach out via email or social media!
                 </p>
+            </div>
+
+            <!-- Form right -->
+            <div class="col-lg-6">
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <div class="form-embed-wrapper">
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSe9raLeowuA_vv7npr0mEJQZ3x5jelJ45jxHbsVWPwQ1EvP_w/viewform?embedded=true"
+                            width="100%" frameborder="0" marginheight="0" marginwidth="0">載入中</iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
