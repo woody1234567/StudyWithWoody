@@ -32,7 +32,6 @@ const musicBtn = document.getElementById('music-toggle');
 const musicIcon = musicBtn.querySelector('i');
 let hasStarted = false;
 
-// 自動播放（第一次進入頁面，需用互動觸發）
 function startMusic() {
     music.play().then(() => {
         // musicBtn.textContent = "playing";
@@ -42,15 +41,6 @@ function startMusic() {
 
     }).catch(() => { });
 }
-
-// 只在第一次互動時自動播放 - Include touch events for mobile
-function handleUserInteraction() {
-    if (!hasStarted) startMusic();
-}
-window.addEventListener('click', handleUserInteraction, { once: true });
-window.addEventListener('touchstart', handleUserInteraction, { once: true, passive: true });
-window.addEventListener('keydown', handleUserInteraction, { once: true });
-window.addEventListener('scroll', handleUserInteraction, { once: true, passive: true });
 
 // Music button toggle function - prevent double trigger
 let musicTouchHandled = false;
